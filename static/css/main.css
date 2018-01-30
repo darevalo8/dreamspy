@@ -1,0 +1,149 @@
+
+nav{
+    background-color: #7200c9 !important;
+}
+.parrafos{
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 2rem;
+}
+.sad, .happy{
+    color: #fff;
+    height: 20rem;
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+.img-sueño{
+    margin-top: 2.5rem;
+}
+.sad{
+    background-color: #8538EA;
+
+}
+.happy{
+    background-color: #11D8B3;
+
+
+}
+.btn-edit{
+    background-color: #8538EA !important;
+    width: 70%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.btn-continue{
+    background-color: #fff !important;
+    width: 70%;
+    padding-bottom: 3rem;
+    color: #8538EA !important;
+    font-size: 19px;
+    font-family: montserrat, arial;
+    font-weight: normal;
+    margin-bottom: 2rem;
+}
+.cancelar{
+    background-color: #11D8B3 !important;
+    width: 70%;
+    color: #fff !important;
+    font-size: 1.5rem;
+    font-family: montserrat, arial;
+    font-weight: normal;
+}
+.cancelar-sad{
+    background-color: #8538EA !important;
+    width: 70%;
+    color: #fff !important;
+    font-size: 1.5rem;
+    font-family: montserrat, arial;
+    font-weight: normal;
+}
+.estado{
+    width: 98px;
+    margin-top: 1rem;
+}
+.opaco{
+    opacity: .2;
+}
+.happy-hidden, .sad-hidden{
+    display: none;
+
+}
+
+
+/*codigo del range*/
+div.rangeslider {
+    box-sizing:content-box;
+    height:1em;
+    position:relative;
+}
+input[type="range"]::-moz-range-thumb{
+    height: 35px!important;
+    width: 35px !important;
+    background: #1e93d8 !important;
+    /*codigo daniel rebolledo*/
+}
+input[type="range"]::-webkit-slider-thumb{
+    height: 30px!important;
+    width: 30px !important;
+    background: #1e93d8 !important;
+    /*codigo daniel rebolledo*/
+}
+#range{
+	margin:-10px 8% 0  !important;
+	width:84% !important;
+	clear:both;
+	position:relative;
+	height:80px !important;
+	background: url(../images/metricas.png);
+	background-size: 100%;
+}
+div.rangeslider *{
+    box-sizing:content-box;
+}
+div.rangeslider div {
+    position:absolute;
+}
+div.rangeslider .rangeouter, div.rangeslider .rangeinner {
+    height:0.3em;
+    margin:0.75em 0;
+}
+div.rangeslider .rangeouter {
+    background:#ddd;
+    width:100%;
+}
+.rangeouter, .rangeinner {
+	height:4px !important;
+}
+
+.rangeselector{
+	top:0 !important;
+	background:#1e93d8 !important;
+}
+div.rangeslider .rangeinner {
+    background:#04B404;
+    width:5em;
+}
+div.rangeslider .rangeselector {
+    margin-left:-0.9em;
+    border-radius:1em;
+    height:1em;
+    width:1em;
+    background:#04B404;
+    /* 5em - border (0.4em) - width/2 (0.5em) */
+    left:4.1em;
+    background-clip:padding-box;
+    border:0.4em solid rgba(0, 0, 0, 0);
+}
+
+div.rangeslider.disabled .rangeinner, div.rangeslider.disabled .rangeselector {
+    background-color:#777!important;
+}
+
+/* Colour Animations */
+div.rangeslider .rangeouter, div.rangeslider .rangeinner, div.rangeslider .rangeselector {
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}

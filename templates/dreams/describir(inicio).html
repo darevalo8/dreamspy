@@ -1,0 +1,62 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Escoger DreamPsy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700|Shadows+Into+Light+Two" rel="stylesheet">
+<link href="{% static  'css/font-awesome.css'%}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/rangeslider.css' %} " rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="menu">
+    	<i class=" menu fa fa-bars" aria-hidden="true"></i>
+        <div class="logo"><img src="{% static 'images/logo-dreamspy.png' %}" /></div>
+        <div class="ayuda" style="opacity:0;"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
+    </div>
+    <div id="container">
+    	<div class="sure desagradable tit-shadow centered f20 white"><div class="spacer"></div><img src="{% static 'images/sad.png' %}" />{{ sad_mensaje }}<a class="bot negativo continue">{{ btn_confirmar }}</a><br /><a class="cancelar">{{ btn_cancelar }}</a></div>
+        
+        
+        <div class="sure agradable tit-shadow centered f20 white"><div class="spacer"></div><img src="{% static 'images/happy.png' %}" />{{ happy_mensaje }}<a class="bot negativo continue">{{ btn_confirmar }}</a><br /><a class="cancelar">{{ btn_cancelar }}</a></div>
+    	<h3>hola {{ user.username }}</h3>
+    <a href="{% url 'logout' %}">Cerrar sesion</a>
+        {% for idioma in idiomas %}
+    	    <ul>
+                <li><a href="#" class="idioma">{{ idioma }}</a></li>
+            </ul>
+    	{% endfor %}
+        <a href="{% url 'dreams:mis_suenos' %}">Mis sueños</a>
+    	<div class="title">{{ sub_pregunta }}</div>
+		
+        <ul class="opciones">
+            <li class="desagradable"><img src="{% static 'images/sad.png' %}" /><span id="sad_image">{{ sad_image }}</span><a href="{% url 'dreams:desagradable' %}"></a></li>
+        	<li class="agradable"><img src=" {% static 'images/happy.png' %}" /><span id="happy_image">{{ happy_image }}</span><a href="{% url 'dreams:agradable' %}"></a></li>
+        </ul><div class="spacer"></div>
+        <div id="range"></div>
+        <div class="clear"></div>
+        <div class="centered"><a class="bot wait disabled">{{ btn_continuar }}</a></div>
+    	<div class="spacer"></div>
+    </div>
+    <div id="footer"></div>
+    <div class="foo-help slideDown s5"><i class="fa fa-angle-down" aria-hidden="true"></i><span>{{ ayuda1 }}</span></div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src=" {% static 'js/code.js' %}"></script>
+<script src="{% static 'js/rangeslider.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script>
+	linked='continuando---->';
+	new RangeSlider($("#range"), {
+		size: 2,
+		borderSize: 0.1,
+		percentage: 50,
+		onMove: function(event) { berificaStado(); },
+		onUp: function(event) { berificaStado(); }
+	});
+</script>
+</html>

@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Chat - Dreampsy</title>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700|Shadows+Into+Light+Two" rel="stylesheet">
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'js/code.js' %}"></script>
+
+</head>
+
+<body>
+	<div id="menu">
+    	<i class=" menu fa fa-bars" aria-hidden="true"></i>
+        <div class="logo"><img src="{% static 'images/logo-dreamspy.png' %}" /></div>
+        <div class="ayuda"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
+    </div>
+    <div id="container" class="chat-page">
+    	<div class="chats" id="chats">
+        	<span>sadadsdsa</span>
+        	<span>sadadsdsa</span>
+        	<span>sadadsdsa</span>
+        </div>
+        
+        <div class="caja_chat">
+        	<div class="swicher"><i class="fa fa-circle" aria-hidden="true"></i><div class="tooltip"><i class="fa fa-caret-down" aria-hidden="true"></i>Personaje 1</div></div>
+        	<textarea class="chat" placeholder="Esbríbele a Mar"></textarea>
+       	 	<div id="sender"></div>
+        </div>
+        <!--<div class="centered none"><a class="bot" href="personajes-agradable.html">Continuar</a></div>-->
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

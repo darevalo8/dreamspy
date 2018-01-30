@@ -1,0 +1,58 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Introduccion</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700|Shadows+Into+Light+Two" rel="stylesheet">
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/glide.core.css' %}">
+<link rel="stylesheet" href="{% static 'css/glide.theme.css' %}">
+<!-- Demo stylesheet -->
+<link rel="stylesheet" href="{% static 'css/demo.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'js/code.js' %}"></script>
+
+</head>
+
+<body>
+	<div id="menu">
+    	<i class=" menu fa fa-bars" aria-hidden="true"></i>
+        <div class="logo"><img src="{% static 'images/logo-dreamspy.png' %}" /></div>
+        <div class="ayuda"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
+    </div>
+    <div id="container">
+				<!--<div class="glide__arrows">
+					<button class="glide__arrow next bot negativo" data-glide-dir=">">Siguiente</button>
+				</div>-->
+				
+				
+        	<div id="text_star_wars" class="star-wars desagradable centered f20 white">
+				<br /><br /><br /><br />
+                Los sueños son una rápida vía de acceso a nuestro mundo interior. Los elementos y personajes presentes en ellos son aspectos de nuestra personalidad representados por nuestra "Psiquis" mediante un lenguaje simbólico, a modo de proyecciones*.<br /><br />
+
+
+P1  y  P2 son en realidad facetas tuyas; lo que experimentan, lo que sienten y la forma en la que los consideras evidencian la relación que tienes contigo mism@.<br /><br />
+
+
+Para alcanzar la plenitud es importante comenzar por hacer consciencia de estas formas de ser, actuar y/o de sentir manifestadas en tus sueños.<br /><br />
+ <div class="tit-shadow text-verde f30">*Mecanismo mediante el cual le atribuimos aspectos propios a otros</div>
+
+				<br /><br /><br /><br />
+        		<div class="centered"><a class="bot negativo " href="{% url 'dreams:instruccion' %}">Continuar</a></div>
+        		
+		</div>
+    	
+        
+        
+    </div>
+    <div id="footer"></div>
+    <script>
+		$("#text_star_wars").animate({ scrollTop: $(document).height()+1000 }, 35000);
+		console.log($(document).height(), ' $(document).height()')
+	</script>
+		
+</body>
+</html>

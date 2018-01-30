@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for dream in dreams %}
+        -----------------------------------------
+        {% if dream.agradable %}
+            <p>Sueño agradable</p>
+        {% else %}
+            <p>Sueño desagradable</p>
+        {% endif %}
+        <p>Descripcion del sueño:</p>
+        {{ dream.descripcion }}
+        <p>Personaje1: {{ dream.personaje1 }}</p>
+        <p>Personaje1: {{ dream.personaje2 }}</p>
+    {% endfor %}
+
+</body>
+</html>

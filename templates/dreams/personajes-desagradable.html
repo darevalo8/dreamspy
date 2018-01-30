@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Documento sin título</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,700|Shadows+Into+Light+Two" rel="stylesheet">
+<link href="{% static  'css/font-awesome.css'%}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'js/code.js' %}"></script>
+
+</head>
+
+<body>
+	<div id="menu">
+    	<i class=" menu fa fa-bars" aria-hidden="true"></i>
+        <div class="logo"><img src="{% static 'images/logo-dreamspy.png' %}" /></div>
+        <div class="ayuda"><i class="fa fa-question-circle" aria-hidden="true"></i></div>
+    </div>
+    <div id="container">
+    	<div class="title">¿Cuales fueron los personajes o elementos fundamentales en la situación desagradable?</div>
+        <div class="desagradable agregar"><img src="{% static 'images/icon-agregar.png' %}" id="agregar_1" /> Agregar personaje <span>1</span>/2</div>
+        <div class="text-ayuda">Ejemplo: *Objetos *Grupos *Lugares *Partes del cuerpo *Eventos *Animales  *Personas, etc.</div>
+        <p>personaje1</p><input type="text" id="personaje1"/>
+        <p>personaje2</p><input type="text" id="personaje2"/>
+        <div class="centered"><a class="bot disable personaje">Continuar</a></div>
+
+    </div>
+    <div id="footer"></div>
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
